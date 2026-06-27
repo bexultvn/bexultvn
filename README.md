@@ -93,7 +93,7 @@
 // contact
 ```
 
-[![Telegram](https://img.shields.io/badge/@bexultvn-000?style=for-the-badge&logo=telegram&logoColor=357AE3&labelColor=000&color=000)](https://t.me/bexultvn)
+[![Telegram](https://img.shields.io/badge/@bexultvn-000?style=for-the-badge&logo=telegram&logoColor=357AE3&labelColor=000&color=000)](https://t.me/bxtn_dev)
 [![GitHub](https://img.shields.io/badge/github.com/bexultvn-357AE3?style=for-the-badge&logo=github&logoColor=000&labelColor=357AE3&color=357AE3)](https://github.com/bexultvn)
 
 </div>
