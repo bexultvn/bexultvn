@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700');
+      .bxtn { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 86px; fill: #ffffff; letter-spacing: -3px; }
+      .dotdev { font-family: 'JetBrains Mono', monospace; font-weight: 400; font-size: 86px; fill: #8A8A86; letter-spacing: -2px; }
+      .tagline { font-family: 'JetBrains Mono', monospace; font-weight: 400; font-size: 15px; fill: #8A8A86; letter-spacing: 4px; }
+
+      .cursor {
+        animation: blink 1s step-end infinite;
+      }
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+
+      .logo-group {
+        animation: fadedown 0.8s cubic-bezier(.22,1,.36,1) both;
+      }
+      @keyframes fadedown {
+        from { opacity: 0; transform: translateY(-16px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+
+      .tag-group {
+        animation: fadeup 0.8s ease 0.4s both;
+      }
+      @keyframes fadeup {
+        from { opacity: 0; transform: translateY(10px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+
+      .line-anim {
+        animation: linein 1.2s ease 0.2s both;
+      }
+      @keyframes linein {
+        from { opacity: 0; stroke-dashoffset: 1200; }
+        to   { opacity: 1; stroke-dashoffset: 0; }
+      }
+
+      .dot { animation: dotin 0.4s ease both; }
+      @keyframes dotin {
+        from { opacity: 0; r: 0; }
+        to   { opacity: 0.18; r: 3; }
+      }
+    </style>
+
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#357AE3" stroke-width="0.5" opacity="0.12"/>
+    </pattern>
+
+    <filter id="blueglow">
+      <feGaussianBlur stdDeviation="60" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- bg -->
+  <rect width="1200" height="300" fill="#000000"/>
+
+  <!-- grid -->
+  <rect width="1200" height="300" fill="url(#grid)"/>
+
+  <!-- glow orb -->
+  <ellipse cx="600" cy="80" rx="280" ry="130" fill="#357AE3" opacity="0.06" filter="url(#blueglow)">
+    <animate attributeName="cx" values="520;680;520" dur="8s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- horizontal accent lines -->
+  <line x1="0" y1="100" x2="1200" y2="100" stroke="#357AE3" stroke-width="0.5" opacity="0.08" stroke-dasharray="1200" stroke-dashoffset="0" class="line-anim"/>
+  <line x1="0" y1="200" x2="1200" y2="200" stroke="#357AE3" stroke-width="0.5" opacity="0.08" stroke-dasharray="1200" stroke-dashoffset="0" class="line-anim"/>
+
+  <!-- corner brackets -->
+  <polyline points="12,28 12,12 28,12" fill="none" stroke="#357AE3" stroke-width="1" opacity="0.4"/>
+  <polyline points="1172,28 1172,12 1156,12" fill="none" stroke="#357AE3" stroke-width="1" opacity="0.4"/>
+  <polyline points="12,272 12,288 28,288" fill="none" stroke="#357AE3" stroke-width="1" opacity="0.4"/>
+  <polyline points="1172,272 1172,288 1156,288" fill="none" stroke="#357AE3" stroke-width="1" opacity="0.4"/>
+
+  <!-- dot grids left -->
+  <g opacity="0.18">
+    <circle cx="48" cy="120" r="2.5" fill="#357AE3"/><circle cx="64" cy="120" r="2.5" fill="#357AE3"/>
+    <circle cx="80" cy="120" r="2.5" fill="#357AE3"/><circle cx="96" cy="120" r="2.5" fill="#357AE3"/>
+    <circle cx="48" cy="136" r="2.5" fill="#357AE3"/><circle cx="64" cy="136" r="2.5" fill="#357AE3"/>
+    <circle cx="80" cy="136" r="2.5" fill="#357AE3"/><circle cx="96" cy="136" r="2.5" fill="#357AE3"/>
+    <circle cx="48" cy="152" r="2.5" fill="#357AE3"/><circle cx="64" cy="152" r="2.5" fill="#357AE3"/>
+    <circle cx="80" cy="152" r="2.5" fill="#357AE3"/><circle cx="96" cy="152" r="2.5" fill="#357AE3"/>
+    <circle cx="48" cy="168" r="2.5" fill="#357AE3"/><circle cx="64" cy="168" r="2.5" fill="#357AE3"/>
+    <circle cx="80" cy="168" r="2.5" fill="#357AE3"/><circle cx="96" cy="168" r="2.5" fill="#357AE3"/>
+  </g>
+  <!-- dot grids right -->
+  <g opacity="0.18">
+    <circle cx="1104" cy="120" r="2.5" fill="#357AE3"/><circle cx="1120" cy="120" r="2.5" fill="#357AE3"/>
+    <circle cx="1136" cy="120" r="2.5" fill="#357AE3"/><circle cx="1152" cy="120" r="2.5" fill="#357AE3"/>
+    <circle cx="1104" cy="136" r="2.5" fill="#357AE3"/><circle cx="1120" cy="136" r="2.5" fill="#357AE3"/>
+    <circle cx="1136" cy="136" r="2.5" fill="#357AE3"/><circle cx="1152" cy="136" r="2.5" fill="#357AE3"/>
+    <circle cx="1104" cy="152" r="2.5" fill="#357AE3"/><circle cx="1120" cy="152" r="2.5" fill="#357AE3"/>
+    <circle cx="1136" cy="152" r="2.5" fill="#357AE3"/><circle cx="1152" cy="152" r="2.5" fill="#357AE3"/>
+    <circle cx="1104" cy="168" r="2.5" fill="#357AE3"/><circle cx="1120" cy="168" r="2.5" fill="#357AE3"/>
+    <circle cx="1136" cy="168" r="2.5" fill="#357AE3"/><circle cx="1152" cy="168" r="2.5" fill="#357AE3"/>
+  </g>
+
+  <!-- main logo -->
+  <g class="logo-group">
+    <text x="600" y="178" text-anchor="middle" class="bxtn" dx="-110">bxtn</text>
+    <text x="600" y="178" text-anchor="middle" class="dotdev" dx="90">.dev</text>
+    <!-- cursor block -->
+    <rect x="812" y="102" width="22" height="76" fill="#357AE3" class="cursor"/>
+  </g>
+
+  <!-- tagline -->
+  <g class="tag-group">
+    <text x="600" y="230" text-anchor="middle" class="tagline">digital solutions</text>
+  </g>
+</svg>
